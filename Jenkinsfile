@@ -9,8 +9,8 @@ pipeline {
     stage('make'){
   
         steps{
-            agent {  windows "sh 'mvn -version'" }
-            agent {  windows   "sh 'java -version' " }
+           sh 'mvn -version'
+           sh 'java -version' 
         } 
       }
   }   
