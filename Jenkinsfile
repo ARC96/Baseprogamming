@@ -6,10 +6,10 @@ pipeline {
     }
   stages {
     stage('make')
-     
+      {
     java -version 
     mvn -version
-    
+      }
   }   
     
 }
