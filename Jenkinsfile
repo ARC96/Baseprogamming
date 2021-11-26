@@ -1,5 +1,5 @@
 pipeline {
-    agent none 
+    agent any 
     tools {
         maven "MAVEN"
         jdk "JDK"
@@ -7,11 +7,11 @@ pipeline {
    
   stages {
     stage('make'){
-    agent { window
+  
         steps{
-          sh 'mvn -version'
-          sh 'java -version'
-        } }
+            agent {  windows "sh 'mvn -version'" }
+            agent {  windows   "sh 'java -version' " }
+        } 
       }
   }   
 }
