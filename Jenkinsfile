@@ -5,10 +5,11 @@ pipeline {
         jdk "JDK"
     }
   stages {
-    stage('make')
-      {
+    stage('make'){
+        steps{
     java -version 
     mvn -version
+        }
       }
   }   
     
