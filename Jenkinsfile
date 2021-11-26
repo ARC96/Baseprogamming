@@ -7,8 +7,8 @@ pipeline {
   stages {
     stage('make'){
         steps{
-    java -version 
-    mvn -version
+          sh 'mvn -version'
+          sh 'java -version'
         }
       }
   }   
