@@ -1,0 +1,17 @@
+pipeline {
+    agent {
+        label params.AGENT == "any" ? "" : params.AGENT 
+    }
+
+    parameters {
+        choice(name: "AGENT", choices: ["any", "docker", "windows", "linux"]) 
+    }
+
+    stages {
+        stage("Build") {
+            steps {
+                echo "Hello, World!"
+            }
+        }
+    }
+}
