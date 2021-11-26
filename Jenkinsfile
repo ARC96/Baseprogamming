@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label params.AGENT == "any" ? "" : params.AGENT 
+        label params.AGENT == "any" ? "windows" : params.AGENT 
     }
 
     parameters {
